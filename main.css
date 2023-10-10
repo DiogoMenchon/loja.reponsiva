@@ -1,74 +1,117 @@
-
-body {
-    font-family: Arial, sans-serif;
+*{
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
-.container {
+.container{
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-
-header {
-    background-color: #643030;
+header{
+    background-color: rgb(0, 114, 89);
     color: white;
-    text-align: center;
     padding: 10px;
 }
 
-
-.sobre-a-loja {
-    background-color: #f4f4f4;
-    padding: 20px;
+.sobre-a-loja{
+    background-color: whitesmoke;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align:center;
 }
 
-.imagem-loja img {
+.conteudo-sobre{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imagem-loja img{
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    margin-left: 0 auto;
 }
 
+.texto{
+    max-width: 800px;
+    margin-top: 20px;
+}
 
-.produtos {
+.produtos{
     padding: 20px;
-    background-color: #fff;
+    background-color: whitesmoke;
 }
 
-.produto {
+.lista-produto{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.lista-produto li{
+    flex: 0 0 calc(25% - 20px);
     border: 1px solid #ddd;
     padding: 10px;
     margin: 10px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
-.produto img {
-    max-width: 40%;
-    height: auto;
+.lista-produto li img{
+    max-width: 100%;
+    height: 100%;
     margin-bottom: 10px;
+    display: block;
+    margin:10px;
 }
 
-button {
-    background-color: #643030;
+.lista-produto button{
+    background-color: rgb(0, 114, 89);
     color: #fff;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
 }
 
+.lista-produto button:hover{
+    background-color: rgb(11, 184, 146);
+}
+
 
 @media screen and (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-    .produto {
+    .lista-produto li {
         flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .lista-produto li {
+        flex: 0 0 calc(100% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sobre-a-loja {
+        padding: 20px;
+    }
+
+    .conteudo-sobre {
+        flex-direction: column-reverse;
+    }
+
+    .imagem-loja img {
+        max-width: 100%;
+        margin-bottom: 20px;
     }
 }
