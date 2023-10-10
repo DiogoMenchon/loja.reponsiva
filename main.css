@@ -115,3 +115,17 @@ header{
         margin-bottom: 20px;
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: auto;
+    }
+}
+
+
+@media screen and (min-width: 769px) {
+    body {
+        overflow-x: hidden;
+    }
+}
